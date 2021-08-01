@@ -24,7 +24,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: [col-start] auto [col-end];
-    padding: 10px;
+    padding: 3.7rem 0 8rem;
 }
 
 @media (min-width: 1000px) {
@@ -49,7 +49,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 #header {
     display: flex;
-    margin: 3.1rem 0 5rem;
+    margin: 0 0 5rem;
     padding: 0 1rem;
     font-family: Helvetica Neue, Arial, sans-serif;
 }
@@ -74,7 +74,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     display: flex;
 }
 #header .menu-item {
-    margin-right: 1rem;
+    margin-right: 0.9rem;
 }
 #header .menu-item a {
     font-size: 13px;
