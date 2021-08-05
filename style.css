@@ -119,3 +119,38 @@ p {
     .blocks-gallery-item {
         margin: 0 0.6rem 0.6rem 0;
 }
+
+/* Homepage image fader */
+
+.image-fade {
+    position: relative;
+}
+
+.image-fade
+    .blocks-gallery-item {
+        opacity: 0;
+        position: absolute;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+}
+
+.image-fade
+    .blocks-gallery-item.visible {
+        opacity: 1;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+}
+
+.image-fade 
+    .blocks-gallery-item {
+        /* display: none; */
+}
+
+.image-fade 
+    .blocks-gallery-item:first-child {
+        /* display: block; */
+}

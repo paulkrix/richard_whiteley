@@ -6,5 +6,6 @@
 <?php endwhile; endif; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
 </main>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
+<h1>This message should not display. Ensure you have set the homepage to the static page named "Homepage".</h1>
 <?php get_footer(); ?>
