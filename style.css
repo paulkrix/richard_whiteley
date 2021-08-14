@@ -19,6 +19,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .skip-link:focus{display:block;left:6px;top:7px;font-size:14px;font-weight:600;text-decoration:none;line-height:normal;padding:15px 23px 14px;z-index:100000;right:auto}
 .visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active){position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}
 
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 /* Global */
 #wrapper {
     display: grid;
@@ -68,13 +72,15 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 #menu {
     flex-grow: 0;
-    font-family: Helvetica Neue, Arial, sans-serif;
 }
 #header .menu {
     display: flex;
 }
 #header .menu-item {
     margin-right: 0.9rem;
+}
+#header .menu-item:last-child {
+    margin-right: 0;
 }
 #header .menu-item a {
     font-size: 13px;
@@ -85,39 +91,106 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Helvetica Neue", Helvetica, Verdana, Arial;
+    text-transform: uppercase;
+    color: #999999;
+    font-weight: 200;
+}
+h2 {
+    letter-spacing: 0.18em;
+    font-size: 15px;
+    margin-bottom: 0rem;
+}
 p {
     font-size: 11pt;
     font-family: Helvetica, Arial, sans-serif;
     color: #333333;
     font-weight: 200;
     line-height: 15pt;
-    padding: 0px 30px 10px 30px;
+    /* padding: 0 0 10px 0; */
+    margin-bottom: .6rem;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
+.wp-block-columns {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .6rem;
+}
+
+.wp-block-columns.force-two-columns {
+    grid-template-columns: 1fr 1fr;
+}
 
 .wp-block-column {
     margin: 0;
+    display: grid;
+    gap: .6rem;
 }
 
 .wp-block-column:not(:first-child) {
     margin: 0;
 }
 
+.wp-block-image {
+    margin: 0;
+    font-size: 0;
+}
+
+.wp-block-image img {
+    height: auto;
+    width: 100%;
+}
+
 .grey-box {
     float: left;
-    width: 470px;
-    height: 470px;
-    margin: 0 .6rem .6rem 0;
+    /* width: 470px; */
+    /* height: 470px; */
+    /* margin: 0 .6rem .6rem 0; */
+    /* margin-right: .6rem; */
+    padding: 1.25rem;
     background-color: #e6e6e6;
     overflow: hidden;
     clear: none;
 }
 
+.grey-box a {
+    letter-spacing: 0.18em;
+    font-family: "Helvetica Neue", Helvetica, Verdana, Arial;
+    font-weight: 200;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #999999;
+    text-decoration: none;
+}
 
 .wp-block-gallery
     .blocks-gallery-grid 
     .blocks-gallery-item {
         margin: 0 0.6rem 0.6rem 0;
+}
+
+@media (min-width: 860px) {
+    .wp-block-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    h2 {
+        margin-bottom: 2rem;
+    }
+    .grey-box {
+        padding: 2rem;
+    }
 }
 
 /* Homepage image fader */
@@ -143,14 +216,4 @@ p {
         -moz-transition: opacity 1s ease-in-out;
         -o-transition: opacity 1s ease-in-out;
         transition: opacity 1s ease-in-out;
-}
-
-.image-fade 
-    .blocks-gallery-item {
-        /* display: none; */
-}
-
-.image-fade 
-    .blocks-gallery-item:first-child {
-        /* display: block; */
 }

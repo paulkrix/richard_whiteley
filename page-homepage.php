@@ -11,13 +11,15 @@
 <script>
     let images = jQuery(".image-fade .blocks-gallery-item");
     let index = 0;
-    images.eq(index).toggleClass('visible');
+    images.eq(index).addClass('visible');
     console.log(images.length);
     function fade() {
-        images.eq(index).toggleClass('visible');
+        console.log('fading');
+        images.eq(index).addClass('visible');
+        images.eq(index-1).removeClass('visible');
         index = (index + 1) % images.length;
-        setTimeout(fade, 3000);
+        setTimeout(fade, 4000);
     }
-    setTimeout(fade, 3000);
+    fade();
 </script>
 <?php get_footer(); ?>
