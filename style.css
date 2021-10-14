@@ -172,6 +172,11 @@ p:last-child {
     text-decoration: none;
 }
 
+.wp-block-gallery {
+    background-color: #e6e6e6;
+    padding: 1.8rem;
+}
+
 .wp-block-gallery
     .blocks-gallery-grid 
     .blocks-gallery-item {
@@ -217,3 +222,14 @@ p:last-child {
         -o-transition: opacity 1s ease-in-out;
         transition: opacity 1s ease-in-out;
 }
+
+/* NEWS */
+
+.news-page-content article {
+    background-color: #e6e6e6;
+    padding: 1.8rem;
+    margin-bottom: .6rem;
+}
+
+/* ABOUT */
+
