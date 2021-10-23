@@ -11,6 +11,7 @@ function richardwhiteley_setup() {
     register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'richardwhiteley' ) ) );
 
     add_image_size( 'wide-thumbnail', 600, 300, true );
+    add_image_size( 'wider-thumbnail', 800, 300, true );
 }
 add_action( 'admin_notices', 'richardwhiteley_admin_notice' );
 function richardwhiteley_admin_notice() {
