@@ -157,3 +157,39 @@ function richardwhiteley_allowed_block_types( $allowed_block_types ) {
     );
 }
 add_filter( 'allowed_block_types', 'richardwhiteley_allowed_block_types');
+
+
+
+
+// function move_header_into_article_body($content) {
+//     if ('post' != get_post_type()) {
+//         return $content;
+//     }
+
+//     echo 'post';
+//     // $pattern ="/<img(.*?)class=\"(.*?)\"(.*?)>/i";
+//     // $replacement = '<img$1class="$2 newclass newclasstwo"$3>';
+ 
+//     // $content = preg_replace($pattern, $replacement, $content);
+ 
+//     // $pattern ="/<p(.*?)class=\"(.*?)\"(.*?)>/i";
+//     // $replacement = '<p$1class="$2 newclass newclasstwo"$3>';
+ 
+//     // $content = preg_replace($pattern, $replacement, $content);
+ 
+//     $re = "/(<header>)(.*)(<\/header>)/";
+
+//     // $re = "/(<header>((?:(?!<\\/header>).)*)<\\/title>\\s*<content>)((?:(?!<\\/content>).)*)/";
+//     // $str = "<xml>\n <item>\n <title>Title 1</title>\n <content>Text 1</content>\n </item>\n <item>\n <title>Title 2</title>\n <content>Text 2</content>\n </item>\n</xml>";
+//     $subst = "$1$2 $3";
+
+
+//     // $re = "/(<title>((?:(?!<\\/title>).)*)<\\/title>\\s*<content>)((?:(?!<\\/content>).)*)/";
+//     // $str = "<xml>\n <item>\n <title>Title 1</title>\n <content>Text 1</content>\n </item>\n <item>\n <title>Title 2</title>\n <content>Text 2</content>\n </item>\n</xml>";
+//     // $subst = "$1$2 $3";
+
+//     $result = preg_replace($re, $subst, $str);
+ 
+//     return $content;
+//  }
+//  add_filter('the_content', 'move_header_into_article_body',11);

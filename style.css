@@ -227,8 +227,35 @@ p:last-child {
 
 .news-page-content article {
     background-color: #e6e6e6;
-    padding: 1.8rem;
+    padding: 0;
     margin-bottom: .6rem;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 233px;
+}
+
+.news-page-content article h2 {
+    margin-bottom: 1.2rem;
+}
+
+/* .news-page-content article .entry-summary {
+    grid-area: 1 / 1 / 3 / 3;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 233px;
+} */
+
+.news-page-content article .entry-summary {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 1.8rem;
+}
+
+/* .news-page-content article .entry-summary p {
+    grid-area: 2 / 1 / 3 / 2;
+} */
+
+.news-page-content article a {
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 /* ABOUT */
