@@ -10,6 +10,7 @@ function richardwhiteley_setup() {
     if ( ! isset( $content_width ) ) { $content_width = 1920; }
     register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'richardwhiteley' ) ) );
 
+    add_image_size( 'medium-thumbnail', 600, 600, true );
     add_image_size( 'wide-thumbnail', 600, 300, true );
     add_image_size( 'wider-thumbnail', 800, 300, true );
 }
@@ -144,6 +145,7 @@ add_filter( 'image_size_names_choose', 'richardwhiteley_custom_sizes' );
 function richardwhiteley_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'wide-thumbnail' => __( 'Wide Thumbnail' ),
+        'medium-thumbnail' => __( 'Medium Thumbnail' ),
     ) );
 }
 
@@ -154,7 +156,8 @@ function richardwhiteley_allowed_block_types( $allowed_block_types ) {
        'core/gallery',
        'core/image',
        'core/columns',
-       'core/column'
+       'core/column',
+       'wpforms/form-selector'
     );
 }
 add_filter( 'allowed_block_types', 'richardwhiteley_allowed_block_types');

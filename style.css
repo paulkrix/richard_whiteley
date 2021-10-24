@@ -307,3 +307,23 @@ p:last-child {
 
 /* ABOUT */
 
+/* ENQUIRE */
+
+div.wpforms-container-full {
+    background: #e6e6e6;
+    margin: 0;
+    padding: 1rem;
+}
+
+form.wpforms-form {
+}
+
+form.wpforms-form input,
+form.wpforms-form textarea {
+    font-size: 0.6rem!important;
+    height: auto!important;
+}
+
+form.wpforms-form label {
+    display: none!important;
+}
