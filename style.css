@@ -215,6 +215,12 @@ p:last-child {
 }
 
 .image-fade
+    .blocks-gallery-grid
+        .blocks-gallery-item {
+            position: absolute;
+}
+
+.image-fade
     .blocks-gallery-item.visible {
         opacity: 1;
         -webkit-transition: opacity 1s ease-in-out;
@@ -222,6 +228,10 @@ p:last-child {
         -o-transition: opacity 1s ease-in-out;
         transition: opacity 1s ease-in-out;
 }
+
+.image-fade
+    .blocks-gallery-grid
+
 
 /* NEWS */
 
